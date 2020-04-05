@@ -1,0 +1,54 @@
+[
+  {
+    "value": {"amount": 1000, "currency": "CZK"},
+    "partyAccount": {"prefix": "035", "accountNumber": "123456789", "bankCode" :"2010"},
+    "dueDate": "15.01.2020",
+    "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
+    "payeeMessage": "Message2",
+    "payerMessage": "Message1",
+    "categoryId": 1,
+    "additionalInfo": {"constantSymbol": "123456789", "variableSymbol": "123456789", "specificSymbol": "123456789"},
+    "id": 1,
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {"amount": 2000, "currency": "CZK"},
+    "partyAccount": {"prefix": "035", "accountNumber": "123456789", "bankCode" :"2010"},
+    "dueDate": "15.02.2019",
+    "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
+    "payeeMessage": "Message2",
+    "payerMessage": "Message1",
+    "categoryId": 2,
+    "additionalInfo": {"constantSymbol": "123456789", "variableSymbol": "123456789", "specificSymbol": "123456789"},
+    "id": 2,
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {"amount": 1500, "currency": "CZK"},
+    "partyAccount": {"prefix": "035", "accountNumber": "234567891", "bankCode" :"2010"},
+    "dueDate": "17.01.2018",
+    "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
+    "payeeMessage": "Message2",
+    "payerMessage": "Message1",
+    "categoryId": 3,
+    "additionalInfo": {"constantSymbol": "123456789", "variableSymbol": "123456789", "specificSymbol": "123456789"},
+    "id": 3,
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {"amount": 500, "currency": "CZK"},
+    "partyAccount": {"prefix": "035", "accountNumber": "234567891", "bankCode" :"2010"},
+    "dueDate": "19.04.2017",
+    "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
+    "payeeMessage": "Message2",
+    "payerMessage": "Message1",
+    "categoryId": 4,
+    "additionalInfo": {"constantSymbol": "123456789", "variableSymbol": "123456789", "specificSymbol": "123456789"},
+    "id": 4,
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "name": "mois-server-mock",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon server_payment.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.2",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "underscore": "^1.9.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.18.7"
+  }
+}

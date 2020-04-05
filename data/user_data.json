@@ -1,0 +1,38 @@
+[
+  {
+    "id": 12342567,
+    "accountId": 123456789,
+    "active": true,
+    "name": "Otakar",
+    "sure_name": "Pařez",
+    "mail" : "abc@a.cz",
+    "password": "heslo"
+  },
+  {
+    "id": 12349067,
+    "accountId": 234567891,
+    "active": false,
+    "name": "Jirka",
+    "sure_name": "Jebal",
+    "mail" : "aabc@a.cz",
+    "password": "heslo"
+  },
+  {
+    "id": 12785567,
+    "accountId": 345678912,
+    "active": true,
+    "name": "Kamil",
+    "sure_name": "Nemyl",
+    "mail" : "abbc@a.cz",
+    "password": "heslo"
+  },
+  {
+    "id": 123224567,
+    "accountId": 456789123,
+    "active": true,
+    "name": "Honza",
+    "sure_name": "Suchý",
+    "mail" : "abcc@a.cz",
+    "password": "heslo"
+  }
+]
