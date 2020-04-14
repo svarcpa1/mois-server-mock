@@ -1,6 +1,7 @@
 [
   {
     "value": {"amount": 1000, "currency": "CZK"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "123456789",  "userID" :"12342567","bankCode_user" :"2010"},
     "partyAccount": {"prefix": "035", "accountNumber": "123456789", "bankCode" :"2010"},
     "dueDate": "15.01.2020",
     "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
@@ -14,6 +15,7 @@
   },
   {
     "value": {"amount": 2000, "currency": "CZK"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "123456789", "userID" :"12342567","bankCode_user" :"2010"},
     "partyAccount": {"prefix": "035", "accountNumber": "123456789", "bankCode" :"2010"},
     "dueDate": "15.02.2019",
     "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
@@ -27,6 +29,7 @@
   },
   {
     "value": {"amount": 1500, "currency": "CZK"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "234567891",  "userID" :"12342567","bankCode_user" :"2010"},
     "partyAccount": {"prefix": "035", "accountNumber": "234567891", "bankCode" :"2010"},
     "dueDate": "17.01.2018",
     "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},
@@ -40,6 +43,7 @@
   },
   {
     "value": {"amount": 500, "currency": "CZK"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "234567891",  "userID" :"12342567","bankCode_user" :"2010"},
     "partyAccount": {"prefix": "035", "accountNumber": "234567891", "bankCode" :"2010"},
     "dueDate": "19.04.2017",
     "recurringPayment": {"firstPayment": "First payment", "lastPayment": "Last payment", "interval": "WEEK"},

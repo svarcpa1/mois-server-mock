@@ -60,7 +60,7 @@ app.get('/paymentListByDate/:from/:to/', (req, res) => {
 app.get('/paymentListByAccountNumber/:accountNumber', (req, res) => {
   let response = getDataPayment();
   let accountNumber_url =req.params.accountNumber;
-  let filtered = _.filter(response, {partyAccount: {accountNumber: accountNumber_url}});
+  let filtered = _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
   sendDelayedResponse(res, filtered, 1);
 });
 
@@ -90,9 +90,12 @@ app.get('/paymentListByCategoryIDUser/:categoryId/:accountNumber', (req, res) =>
   }
 
   let filtered = _.filter(response, (v) => _.indexOf(catInt, v.categoryId) !== -1);
-  let filtered2 = _.filter(filtered, {partyAccount: {accountNumber: accountNumber_url}});
+  let filtered2 = _.filter(filtered, {userAccount: {accountNumber_user: accountNumber_url}});
   sendDelayedResponse(res, filtered2, 1);
 });
+
+
+
 
 app.post("/paymentItem", (req, res) => {
   let data = getDataPayment();
@@ -157,6 +160,9 @@ app.get("/userAuthenticateBool/:mail/:password", (req, res) => {
   sendDelayedResponse(res, filtered, 1);
 });
 
+
+
+
 app.post("/userItem", (req, res) => {
   let data = getDataUser();
   let item = req.body;
@@ -184,7 +190,7 @@ app.delete("/userItem", (req, res) => {
   sendDelayedResponse(res, newItem, 1);
 });
 
-//---
+//----------------------------------------------------------------------------------------------------------------------
 
 function getDataPayment(){
   let text = fs.readFileSync('./data/payment_data.json','utf8');
@@ -214,7 +220,7 @@ function saveDataUser(data){
   );
 }
 
-//---
+//----------------------------------------------------------------------------------------------------------------------
 
 function sendDelayedResponse(res, object, delay){
   setTimeout(function() {
