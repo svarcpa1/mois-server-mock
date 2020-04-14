@@ -94,13 +94,13 @@ app.get('/paymentListByCategoryIDUser/:categoryId/:accountNumber', (req, res) =>
   sendDelayedResponse(res, filtered2, 1);
 });
 
-
-
-
 app.post("/paymentItem", (req, res) => {
   let data = getDataPayment();
   let item = req.body;
   item.id = new Date().getTime();
+  item.dueDate = Date.now();
+  item.categoryId = calculateCategory(item.userAccount.accountNumber_user, item.partyAccount.accountNumber, 0);
+
   data.push(item);
   saveDataPayment(data);
   sendDelayedResponse(res, item, 1);
@@ -132,10 +132,10 @@ app.get("/userList", (req, res) => {
   sendDelayedResponse(res, filtered, 1);
 });
 
-app.get("/userListByID/:accountId", (req, res) => {
+app.get("/userByAccount/:accountNumber", (req, res) => {
   let response = getDataUser();
-  let account_id =parseInt(req.params.accountId);
-  let filtered = _.filter(response, { 'accountId': account_id});
+  let accountNumber_url = req.params.accountNumber;
+  let filtered = _.filter(response, {userAccount: {number: accountNumber_url}});
   sendDelayedResponse(res, filtered, 1);
 });
 
@@ -159,9 +159,6 @@ app.get("/userAuthenticateBool/:mail/:password", (req, res) => {
   }
   sendDelayedResponse(res, filtered, 1);
 });
-
-
-
 
 app.post("/userItem", (req, res) => {
   let data = getDataUser();
@@ -235,6 +232,54 @@ function isEmptyObject(obj) {
     }
   }
   return true;
+}
+
+
+function calculateCategory(userAccount, partyAccount, mode) {
+  let category;
+  switch (mode) {
+    case 0:
+      let response = getDataPayment();
+      let filtered = _.filter(response, {userAccount: {accountNumber_user: userAccount}});
+      let filtered2 = _.filter(filtered, {partyAccount: {accountNumber: userAccount}});
+
+      if (filtered2 === []) {
+        category = 0;
+        return category.toString();
+      } else if (filtered2.length < 3) {
+        category = 0;
+        return category.toString();
+      } else {
+        let categoryArray = _.map(filtered2,'categoryId'); //create an array of tag values from the object array
+
+        return mostCommon(categoryArray);
+      }
+
+      break;
+    default:
+      //code
+  }
+}
+
+function mostCommon(array) {
+  if(array.length == 0)
+    return null;
+  var modeMap = {};
+  var maxEl = array[0], maxCount = 1;
+  for(var i = 0; i < array.length; i++)
+  {
+    var el = array[i];
+    if(modeMap[el] == null)
+      modeMap[el] = 1;
+    else
+      modeMap[el]++;
+    if(modeMap[el] > maxCount)
+    {
+      maxEl = el;
+      maxCount = modeMap[el];
+    }
+  }
+  return maxEl;
 }
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
