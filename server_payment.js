@@ -4,27 +4,21 @@ const path = require('path');
 const fs = require("fs");
 
 const app = express();
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 const port = process.env.PORT || 5000;
 
 app.use(express.static(path.join(__dirname, 'build'), {maxAge: "30d"}));
 
 app.use(function (req, res, next) {
-  // Website you wish to allow to connect
   res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-  // Request methods you wish to allow
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-  // Request headers you wish to allow
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-  // Pass to next layer of middleware
   next();
 });
 
-var _ = require('lodash');
-
-var moment = require('moment');
-
+let _ = require('lodash');
+let moment = require('moment');
 moment().format();
 
 app.get('/', function(req, res) {
@@ -37,14 +31,12 @@ app.get("/paymentList", (req, res) => {
   let response = getDataPayment();
   sendDelayedResponse(res, response, 1);
 });
-
 app.get('/paymentListByID/:id', (req, res) => {
   let response = getDataPayment();
   let id_url =parseInt(req.params.id);
   let filtered = _.filter(response, { 'id': id_url});
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get('/paymentListByDate/:from/:to/', (req, res) => {
   let response = getDataPayment();
   let from_url = req.params.from;
@@ -56,14 +48,12 @@ app.get('/paymentListByDate/:from/:to/', (req, res) => {
   });
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get('/paymentListByAccountNumber/:accountNumber', (req, res) => {
   let response = getDataPayment();
   let accountNumber_url =req.params.accountNumber;
   let filtered = _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get('/paymentListByCategoryID/:categoryId', (req, res) => {
   let response = getDataPayment();
   let idCategory_url = req.params.categoryId;
@@ -77,7 +67,6 @@ app.get('/paymentListByCategoryID/:categoryId', (req, res) => {
   let filtered = _.filter(response, (v) => _.indexOf(catInt, v.categoryId) !== -1);
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get('/paymentListByCategoryIDUser/:categoryId/:accountNumber', (req, res) => {
   let response = getDataPayment();
   let idCategory_url = req.params.categoryId;
@@ -93,7 +82,6 @@ app.get('/paymentListByCategoryIDUser/:categoryId/:accountNumber', (req, res) =>
   let filtered2 = _.filter(filtered, {userAccount: {accountNumber_user: accountNumber_url}});
   sendDelayedResponse(res, filtered2, 1);
 });
-
 app.post("/paymentItem", (req, res) => {
   let data = getDataPayment();
   let item = req.body;
@@ -105,7 +93,6 @@ app.post("/paymentItem", (req, res) => {
   saveDataPayment(data);
   sendDelayedResponse(res, item, 1);
 });
-
 app.put("/paymentItem", (req, res) => {
   let newItem = req.body;
   let data = getDataPayment();
@@ -114,7 +101,6 @@ app.put("/paymentItem", (req, res) => {
   saveDataPayment(data);
   sendDelayedResponse(res, newItem, 1);
 });
-
 app.delete("/paymentItem", (req, res) => {
   let newItem = req.body;
   let data = getDataPayment();
@@ -131,14 +117,12 @@ app.get("/userList", (req, res) => {
   let filtered = _.filter(response, { 'active': true});
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get("/userByAccount/:accountNumber", (req, res) => {
   let response = getDataUser();
   let accountNumber_url = req.params.accountNumber;
   let filtered = _.filter(response, {userAccount: {number: accountNumber_url}});
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get("/userAuthenticate/:mail/:password/", (req, res) => {
   let response = getDataUser();
   let mail = req.params.mail;
@@ -146,7 +130,6 @@ app.get("/userAuthenticate/:mail/:password/", (req, res) => {
   let filtered = _.filter(response, { 'mail': mail, 'password': password});
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.get("/userAuthenticateBool/:mail/:password", (req, res) => {
   let response = getDataUser();
   let mail = req.params.mail;
@@ -159,7 +142,6 @@ app.get("/userAuthenticateBool/:mail/:password", (req, res) => {
   }
   sendDelayedResponse(res, filtered, 1);
 });
-
 app.post("/userItem", (req, res) => {
   let data = getDataUser();
   let item = req.body;
@@ -168,7 +150,6 @@ app.post("/userItem", (req, res) => {
   saveDataUser(data);
   sendDelayedResponse(res, item, 1);
 });
-
 app.put("/userItem", (req, res) => {
   let newItem = req.body;
   let data = getDataUser();
@@ -177,7 +158,6 @@ app.put("/userItem", (req, res) => {
   saveDataUser(data);
   sendDelayedResponse(res, newItem, 1);
 });
-
 app.delete("/userItem", (req, res) => {
   let newItem = req.body;
   let data = getDataUser();
@@ -234,41 +214,59 @@ function isEmptyObject(obj) {
   return true;
 }
 
+//----------------------------------------------------------------------------------------------------------------------
 
 function calculateCategory(userAccount, partyAccount, mode) {
   let category;
-  switch (mode) {
-    case 0:
-      let response = getDataPayment();
-      let filtered = _.filter(response, {userAccount: {accountNumber_user: userAccount}});
-      let filtered2 = _.filter(filtered, {partyAccount: {accountNumber: userAccount}});
+  let response = getDataPayment();
 
+  //for party account
+  let filtered = _.filter(response, {partyAccount: {accountNumber: userAccount}});
+  //user account
+  let filtered2 = _.filter(filtered, {userAccount: {accountNumber_user: userAccount}});
+
+  switch (mode) {
+
+    //most common
+    case 0:
       if (filtered2 === []) {
         category = 0;
         return category.toString();
-      } else if (filtered2.length < 3) {
-        category = 0;
-        return category.toString();
+      } else if (filtered2.length <= 3) {
+        let categoryArrayGlobal = _.map(filtered,'categoryId'); //create an array of tag values from the object array
+        category = mostCommon(categoryArrayGlobal);
       } else {
-        let categoryArray = _.map(filtered2,'categoryId'); //create an array of tag values from the object array
+        let categoryArrayUser = _.map(filtered2,'categoryId'); //create an array of tag values from the object array
+        category = mostCommon(categoryArrayUser);
+      }
+      return category;
 
-        return mostCommon(categoryArray);
+    //last
+    case 1:
+      let ordered = _.orderBy(filtered2, ['dueDate'], ['desc']);
+      let headOrdered = _.head(ordered);
+
+      if (headOrdered.length > 0) {
+        category = headOrdered[0].categoryId;
+      } else {
+        category = 0;
       }
 
-      break;
+      return category;
+
     default:
-      //code
+      return 0;
   }
 }
 
 function mostCommon(array) {
-  if(array.length == 0)
+  if(array.length === 0)
     return null;
-  var modeMap = {};
-  var maxEl = array[0], maxCount = 1;
-  for(var i = 0; i < array.length; i++)
+  let modeMap = {};
+  let maxEl = array[0], maxCount = 1;
+  for(let i = 0; i < array.length; i++)
   {
-    var el = array[i];
+    let el = array[i];
     if(modeMap[el] == null)
       modeMap[el] = 1;
     else

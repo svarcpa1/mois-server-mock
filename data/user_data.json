@@ -6,7 +6,8 @@
     "name": "Otakar",
     "sure_name": "Pařez",
     "mail" : "abc@a.cz",
-    "password": "heslo"
+    "password": "heslo",
+    "prediction_mode": 1
   },
   {
     "id": 12349067,
@@ -15,7 +16,8 @@
     "name": "Jirka",
     "sure_name": "Jebal",
     "mail" : "aabc@a.cz",
-    "password": "heslo"
+    "password": "heslo",
+    "prediction_mode": 0
   },
   {
     "id": 12785567,
@@ -24,7 +26,8 @@
     "name": "Kamil",
     "sure_name": "Nemyl",
     "mail" : "abbc@a.cz",
-    "password": "heslo"
+    "password": "heslo",
+    "prediction_mode": 1
   },
   {
     "id": 123224567,
@@ -33,6 +36,7 @@
     "name": "Honza",
     "sure_name": "Suchý",
     "mail" : "abcc@a.cz",
-    "password": "heslo"
+    "password": "heslo",
+    "prediction_mode": 0
   }
 ]
