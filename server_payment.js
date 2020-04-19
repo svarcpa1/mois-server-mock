@@ -86,7 +86,7 @@ app.post("/paymentItem", (req, res) => {
   let data = getDataPayment();
   let item = req.body;
   item.id = new Date().getTime();
-  item.dueDate = Date.now();
+  item.dueDate = moment();
   item.categoryId = calculateCategory(item.userAccount.accountNumber_user, item.partyAccount.accountNumber, 0);
 
   data.push(item);
