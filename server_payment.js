@@ -48,6 +48,44 @@ app.get('/paymentListByDate/:from/:to/', (req, res) => {
   });
   sendDelayedResponse(res, filtered, 1);
 });
+//new
+app.get('/paymentListByDateUser/:from/:to/:accountNumber', (req, res) => {
+  let response = getDataPayment();
+  let from_url = req.params.from;
+  let to_url = req.params.to;
+  let accountNumber_url =req.params.accountNumber;
+  let dateFormat = "DD-MM-YYYY";
+  let filteredAccountNumber =  _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
+  let filtered = filteredAccountNumber.filter((o) => {
+    return moment(o.dueDate, 'DD.MM.YYYY') // Convert to moment with exactly date format
+        .isBetween(moment(from_url, dateFormat), moment(to_url, dateFormat));
+  });
+  sendDelayedResponse(res, filtered, 1);
+});
+//new
+app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (req, res) => {
+  let response = getDataPayment();
+  let from_url = req.params.from;
+  let to_url = req.params.to;
+  let accountNumber_url =req.params.accountNumber;
+  let idCategory_url = req.params.categoryId;
+  let dateFormat = "DD-MM-YYYY";
+
+  let catString = idCategory_url.split("");
+  let catInt = [];
+
+  for (let i = 0; i<catString.length; i++) {
+    catInt.push(parseInt(catString[i]));
+  }
+
+  let filteredByCategory = _.filter(response, (v) => _.indexOf(catInt, v.categoryId) !== -1);
+  let filteredAccountNumber =  _.filter(filteredByCategory, {userAccount: {accountNumber_user: accountNumber_url}});
+  let filtered = filteredAccountNumber.filter((o) => {
+    return moment(o.dueDate, 'DD.MM.YYYY') // Convert to moment with exactly date format
+        .isBetween(moment(from_url, dateFormat), moment(to_url, dateFormat));
+  });
+  sendDelayedResponse(res, filtered, 1);
+});
 app.get('/paymentListByAccountNumber/:accountNumber', (req, res) => {
   let response = getDataPayment();
   let accountNumber_url =req.params.accountNumber;
