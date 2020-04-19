@@ -1,7 +1,7 @@
 [
   {
     "id": 12342567,
-    "userAccount": {"prefix_user": "035", "number": "123456789", "bankCode_user": "2010"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "123456789", "bankCode_user": "2010"},
     "active": true,
     "name": "Otakar",
     "sure_name": "Pařez",
@@ -11,7 +11,7 @@
   },
   {
     "id": 12349067,
-    "userAccount": {"prefix_user": "035", "number": "234567891", "bankCode_user": "2010"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "234567891", "bankCode_user": "2010"},
     "active": false,
     "name": "Jirka",
     "sure_name": "Jebal",
@@ -21,7 +21,7 @@
   },
   {
     "id": 12785567,
-    "userAccount": {"prefix_user": "035", "number": "345678912", "bankCode_user": "2010"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "345678912", "bankCode_user": "2010"},
     "active": true,
     "name": "Kamil",
     "sure_name": "Nemyl",
@@ -31,7 +31,7 @@
   },
   {
     "id": 123224567,
-    "userAccount": {"prefix_user": "035", "number": "34518678912", "bankCode_user": "2010"},
+    "userAccount": {"prefix_user": "035", "accountNumber_user": "34518678912", "bankCode_user": "2010"},
     "active": true,
     "name": "Honza",
     "sure_name": "Suchý",

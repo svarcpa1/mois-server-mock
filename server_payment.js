@@ -120,7 +120,7 @@ app.get("/userList", (req, res) => {
 app.get("/userByAccount/:accountNumber", (req, res) => {
   let response = getDataUser();
   let accountNumber_url = req.params.accountNumber;
-  let filtered = _.filter(response, {userAccount: {number: accountNumber_url}});
+  let filtered = _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
   sendDelayedResponse(res, filtered, 1);
 });
 app.get("/userAuthenticate/:mail/:password/", (req, res) => {
