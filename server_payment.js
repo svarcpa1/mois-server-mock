@@ -33,7 +33,7 @@ app.get("/paymentList", (req, res) => {
 });
 app.get('/paymentListByID/:id', (req, res) => {
   let response = getDataPayment();
-  let id_url =parseInt(req.params.id);
+  let id_url =req.params.id;
   let filtered = _.filter(response, { 'id': id_url});
   sendDelayedResponse(res, filtered, 1);
 });
@@ -53,7 +53,7 @@ app.get('/paymentListByDateUser/:from/:to/:accountNumber', (req, res) => {
   let response = getDataPayment();
   let from_url = req.params.from;
   let to_url = req.params.to;
-  let accountNumber_url =req.params.accountNumber;
+  let accountNumber_url =parseInt(req.params.accountNumber);
   let dateFormat = "DD-MM-YYYY";
   let filteredAccountNumber =  _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
   let filtered = filteredAccountNumber.filter((o) => {
@@ -67,7 +67,7 @@ app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (
   let response = getDataPayment();
   let from_url = req.params.from;
   let to_url = req.params.to;
-  let accountNumber_url =req.params.accountNumber;
+  let accountNumber_url =parseInt(req.params.accountNumber);
   let idCategory_url = req.params.categoryId;
   let dateFormat = "DD-MM-YYYY";
 
@@ -88,7 +88,7 @@ app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (
 });
 app.get('/paymentListByAccountNumber/:accountNumber', (req, res) => {
   let response = getDataPayment();
-  let accountNumber_url =req.params.accountNumber;
+  let accountNumber_url =parseInt(req.params.accountNumber);
   let filtered = _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
   sendDelayedResponse(res, filtered, 1);
 });
@@ -108,7 +108,7 @@ app.get('/paymentListByCategoryID/:categoryId', (req, res) => {
 app.get('/paymentListByCategoryIDUser/:categoryId/:accountNumber', (req, res) => {
   let response = getDataPayment();
   let idCategory_url = req.params.categoryId;
-  let accountNumber_url = req.params.accountNumber;
+  let accountNumber_url = parseInt(req.params.accountNumber);
   let catString = idCategory_url.split("");
   let catInt = [];
 
@@ -124,7 +124,7 @@ app.post("/paymentItem", (req, res) => {
   let data = getDataPayment();
   let item = req.body;
   item.id = new Date().getTime();
-  item.dueDate = moment();
+  item.dueDate = moment().format("DD.MM.YYYY");
   item.categoryId = calculateCategory(item.userAccount.accountNumber_user, item.partyAccount.accountNumber, 0);
 
   data.push(item);
