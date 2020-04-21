@@ -1,166 +1,562 @@
 [
   {
     "value": {
-      "amount": 1000,
+      "amount": 6638,
       "currency": "CZK"
     },
     "userAccount": {
-      "prefix_user": "035",
-      "accountNumber_user": "123456789",
-      "bankCode_user": "2010"
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
     },
     "partyAccount": {
-      "prefix": "035",
-      "accountNumber": "123456789",
-      "bankCode": "2010"
+      "prefix": 35,
+      "accountNumber": 4444444444,
+      "bankCode": 2010
     },
-    "dueDate": "15.01.2020",
+    "dueDate": "09.08.2019",
     "recurringPayment": {
       "firstPayment": "First payment",
       "lastPayment": "Last payment",
       "interval": "WEEK"
     },
-    "payeeMessage": "Message2",
-    "payerMessage": "Message1",
-    "categoryId": 1,
+    "payeeMessage": "ad ea",
+    "payerMessage": "ea exercitation id",
+    "categoryId": 5,
     "additionalInfo": {
-      "constantSymbol": "123456789",
-      "variableSymbol": "123456789",
-      "specificSymbol": "123456789"
+      "constantSymbol": 7952077,
+      "variableSymbol": 8631294,
+      "specificSymbol": 7360293
     },
-    "id": 1,
+    "id": "5e9f095d743563e12ff1aa69",
     "editableByUser": true,
     "realizationStatus": "RTS_REALISED"
   },
   {
     "value": {
-      "amount": 2000,
+      "amount": 9810,
       "currency": "CZK"
     },
     "userAccount": {
-      "prefix_user": "035",
-      "accountNumber_user": "123456789",
-      "bankCode_user": "2010"
+      "prefix_user": 35,
+      "accountNumber_user": 34518678912,
+      "bankCode_user": 2010
     },
     "partyAccount": {
-      "prefix": "035",
-      "accountNumber": "123456789",
-      "bankCode": "2010"
+      "prefix": 35,
+      "accountNumber": 66666666666,
+      "bankCode": 2010
     },
-    "dueDate": "15.02.2019",
+    "dueDate": "13.01.2019",
     "recurringPayment": {
       "firstPayment": "First payment",
       "lastPayment": "Last payment",
       "interval": "WEEK"
     },
-    "payeeMessage": "Message2",
-    "payerMessage": "Message1",
-    "categoryId": 2,
-    "additionalInfo": {
-      "constantSymbol": "123456789",
-      "variableSymbol": "123456789",
-      "specificSymbol": "123456789"
-    },
-    "id": 2,
-    "editableByUser": true,
-    "realizationStatus": "RTS_REALISED"
-  },
-  {
-    "value": {
-      "amount": 1500,
-      "currency": "CZK"
-    },
-    "userAccount": {
-      "prefix_user": "035",
-      "accountNumber_user": "234567891",
-      "bankCode_user": "2010"
-    },
-    "partyAccount": {
-      "prefix": "035",
-      "accountNumber": "234567891",
-      "bankCode": "2010"
-    },
-    "dueDate": "17.01.2018",
-    "recurringPayment": {
-      "firstPayment": "First payment",
-      "lastPayment": "Last payment",
-      "interval": "WEEK"
-    },
-    "payeeMessage": "Message2",
-    "payerMessage": "Message1",
-    "categoryId": 3,
-    "additionalInfo": {
-      "constantSymbol": "123456789",
-      "variableSymbol": "123456789",
-      "specificSymbol": "123456789"
-    },
-    "id": 3,
-    "editableByUser": true,
-    "realizationStatus": "RTS_REALISED"
-  },
-  {
-    "value": {
-      "amount": 500,
-      "currency": "CZK"
-    },
-    "userAccount": {
-      "prefix_user": "035",
-      "accountNumber_user": "234567891",
-      "bankCode_user": "2010"
-    },
-    "partyAccount": {
-      "prefix": "035",
-      "accountNumber": "234567891",
-      "bankCode": "2010"
-    },
-    "dueDate": "19.04.2017",
-    "recurringPayment": {
-      "firstPayment": "First payment",
-      "lastPayment": "Last payment",
-      "interval": "WEEK"
-    },
-    "payeeMessage": "Message2",
-    "payerMessage": "Message1",
-    "categoryId": 4,
-    "additionalInfo": {
-      "constantSymbol": "123456789",
-      "variableSymbol": "123456789",
-      "specificSymbol": "123456789"
-    },
-    "id": 4,
-    "editableByUser": true,
-    "realizationStatus": "RTS_REALISED"
-  },
-  {
-    "value": {
-      "amount": 2999,
-      "currency": "CZK"
-    },
-    "userAccount": {
-      "prefix_user": "035",
-      "accountNumber_user": "456789123",
-      "bankCode_user": "2010"
-    },
-    "partyAccount": {
-      "prefix": "035",
-      "accountNumber": "123456789",
-      "bankCode": "3040"
-    },
-    "dueDate": "15.02.2019",
-    "recurringPayment": {
-      "firstPayment": "First payment",
-      "lastPayment": "Last payment",
-      "interval": "WEEK"
-    },
-    "payeeMessage": "msg",
-    "payerMessage": "msg",
+    "payeeMessage": "fugiat incididunt",
+    "payerMessage": "minim voluptate aliquip",
     "categoryId": 0,
     "additionalInfo": {
-      "constantSymbol": "123456789",
-      "variableSymbol": "123456789",
-      "specificSymbol": "123456789"
+      "constantSymbol": 6170818,
+      "variableSymbol": 5995593,
+      "specificSymbol": 7906068
     },
-    "id": 1586872336277,
+    "id": "5e9f095d2eb0699b716e1a94",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 4498,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 234567891,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 8888888888,
+      "bankCode": 2010
+    },
+    "dueDate": "17.04.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "ullamco ullamco",
+    "payerMessage": "tempor est cillum",
+    "categoryId": 5,
+    "additionalInfo": {
+      "constantSymbol": 6778863,
+      "variableSymbol": 8180249,
+      "specificSymbol": 6311314
+    },
+    "id": "5e9f095d7612f927bfda5e6b",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 6174,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 234567891,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 111111111,
+      "bankCode": 2010
+    },
+    "dueDate": "04.03.2020",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "commodo non",
+    "payerMessage": "commodo occaecat occaecat",
+    "categoryId": 1,
+    "additionalInfo": {
+      "constantSymbol": 4266450,
+      "variableSymbol": 3384502,
+      "specificSymbol": 8978430
+    },
+    "id": "5e9f095d40eb4bb047cc45ff",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 4629,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 101010101010101,
+      "bankCode": 2010
+    },
+    "dueDate": "18.01.2020",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "aute dolor",
+    "payerMessage": "proident velit cupidatat",
+    "categoryId": 3,
+    "additionalInfo": {
+      "constantSymbol": 6961378,
+      "variableSymbol": 4110286,
+      "specificSymbol": 1483473
+    },
+    "id": "5e9f095db2ba1674d943b298",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 3421,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 8888888888,
+      "bankCode": 2010
+    },
+    "dueDate": "19.02.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "dolore do",
+    "payerMessage": "veniam duis nostrud",
+    "categoryId": 2,
+    "additionalInfo": {
+      "constantSymbol": 1480967,
+      "variableSymbol": 6247097,
+      "specificSymbol": 6025418
+    },
+    "id": "5e9f095d993bfe38fb3102b2",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 1713,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 345678912,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 4444444444,
+      "bankCode": 2010
+    },
+    "dueDate": "20.03.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "anim incididunt",
+    "payerMessage": "nisi velit consequat",
+    "categoryId": 5,
+    "additionalInfo": {
+      "constantSymbol": 6270118,
+      "variableSymbol": 1534979,
+      "specificSymbol": 4687252
+    },
+    "id": "5e9f095d96d756d6fec20428",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 2459,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 34518678912,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 77777777777,
+      "bankCode": 2010
+    },
+    "dueDate": "18.03.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "laboris ut",
+    "payerMessage": "in consequat cupidatat",
+    "categoryId": 5,
+    "additionalInfo": {
+      "constantSymbol": 3587098,
+      "variableSymbol": 5019254,
+      "specificSymbol": 4738964
+    },
+    "id": "5e9f095d66bac53089fe107d",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 3041,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 234567891,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 9999999999,
+      "bankCode": 2010
+    },
+    "dueDate": "06.10.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "eiusmod anim",
+    "payerMessage": "do voluptate exercitation",
+    "categoryId": 1,
+    "additionalInfo": {
+      "constantSymbol": 5158133,
+      "variableSymbol": 4932897,
+      "specificSymbol": 1908666
+    },
+    "id": "5e9f095dde9c447f90a82b2f",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 1473,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 9999999999,
+      "bankCode": 2010
+    },
+    "dueDate": "30.09.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "laborum deserunt",
+    "payerMessage": "laborum adipisicing aliquip",
+    "categoryId": 0,
+    "additionalInfo": {
+      "constantSymbol": 8843273,
+      "variableSymbol": 2881801,
+      "specificSymbol": 3950931
+    },
+    "id": "5e9f095d44ccec26fb0dc246",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 2528,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 77777777777,
+      "bankCode": 2010
+    },
+    "dueDate": "27.07.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "culpa laborum",
+    "payerMessage": "pariatur amet ipsum",
+    "categoryId": 3,
+    "additionalInfo": {
+      "constantSymbol": 5961086,
+      "variableSymbol": 8482652,
+      "specificSymbol": 2953422
+    },
+    "id": "5e9f095dc86159968d291a7d",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 5671,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 34518678912,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 55555555555,
+      "bankCode": 2010
+    },
+    "dueDate": "25.05.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "occaecat id",
+    "payerMessage": "aliquip pariatur qui",
+    "categoryId": 2,
+    "additionalInfo": {
+      "constantSymbol": 4142821,
+      "variableSymbol": 2951556,
+      "specificSymbol": 3410360
+    },
+    "id": "5e9f095d7c2c5cc0d2215cf0",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 98,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 34518678912,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 222222222,
+      "bankCode": 2010
+    },
+    "dueDate": "15.08.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "ipsum nostrud",
+    "payerMessage": "nostrud anim minim",
+    "categoryId": 1,
+    "additionalInfo": {
+      "constantSymbol": 6364559,
+      "variableSymbol": 4604657,
+      "specificSymbol": 8144608
+    },
+    "id": "5e9f095df0ded8bac16ea0ae",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 244,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 3333333333,
+      "bankCode": 2010
+    },
+    "dueDate": "28.03.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "elit irure",
+    "payerMessage": "cupidatat nulla elit",
+    "categoryId": 3,
+    "additionalInfo": {
+      "constantSymbol": 3682972,
+      "variableSymbol": 5879268,
+      "specificSymbol": 7712794
+    },
+    "id": "5e9f095dc3e2e817ccba28e1",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 4270,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 34518678912,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 9999999999,
+      "bankCode": 2010
+    },
+    "dueDate": "11.12.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "minim laboris",
+    "payerMessage": "dolore ipsum aliqua",
+    "categoryId": 4,
+    "additionalInfo": {
+      "constantSymbol": 3927079,
+      "variableSymbol": 5586401,
+      "specificSymbol": 8186083
+    },
+    "id": "5e9f095d6decaa26ddf69109",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 2012,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 123456789,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 66666666666,
+      "bankCode": 2010
+    },
+    "dueDate": "15.04.2020",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "est sint",
+    "payerMessage": "ad consectetur ut",
+    "categoryId": 1,
+    "additionalInfo": {
+      "constantSymbol": 1072095,
+      "variableSymbol": 6738850,
+      "specificSymbol": 1472612
+    },
+    "id": "5e9f095dd9be11f18fbf8cf9",
+    "editableByUser": true,
+    "realizationStatus": "RTS_REALISED"
+  },
+  {
+    "value": {
+      "amount": 8251,
+      "currency": "CZK"
+    },
+    "userAccount": {
+      "prefix_user": 35,
+      "accountNumber_user": 234567891,
+      "bankCode_user": 2010
+    },
+    "partyAccount": {
+      "prefix": 35,
+      "accountNumber": 55555555555,
+      "bankCode": 2010
+    },
+    "dueDate": "14.02.2019",
+    "recurringPayment": {
+      "firstPayment": "First payment",
+      "lastPayment": "Last payment",
+      "interval": "WEEK"
+    },
+    "payeeMessage": "proident sit",
+    "payerMessage": "incididunt voluptate commodo",
+    "categoryId": 1,
+    "additionalInfo": {
+      "constantSymbol": 5063347,
+      "variableSymbol": 4434750,
+      "specificSymbol": 8827160
+    },
+    "id": "5e9f095d4b7ac442d76bbea7",
     "editableByUser": true,
     "realizationStatus": "RTS_REALISED"
   }
