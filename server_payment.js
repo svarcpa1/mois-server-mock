@@ -54,7 +54,7 @@ app.get('/paymentListByDateUser/:from/:to/:accountNumber', (req, res) => {
   let from_url = req.params.from;
   let to_url = req.params.to;
   let accountNumber_url =parseInt(req.params.accountNumber);
-  let dateFormat = "DD.MM.YYYY";
+  let dateFormat = "YYYY-MM-DD";
   let filteredAccountNumber =  _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
   let filtered = filteredAccountNumber.filter((o) => {
     return moment(o.dueDate, 'DD.MM.YYYY') // Convert to moment with exactly date format
@@ -69,7 +69,7 @@ app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (
   let to_url = req.params.to;
   let accountNumber_url =parseInt(req.params.accountNumber);
   let idCategory_url = req.params.categoryID;
-  let dateFormat = "DD.MM.YYYY";
+  let dateFormat = "YYYY-MM-DD";
 
   let catString = idCategory_url.split("");
   let catInt = [];
