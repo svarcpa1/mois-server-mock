@@ -68,7 +68,7 @@ app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (
   let from_url = req.params.from;
   let to_url = req.params.to;
   let accountNumber_url =parseInt(req.params.accountNumber);
-  let idCategory_url = req.params.categoryId;
+  let idCategory_url = req.params.categoryID;
   let dateFormat = "DD.MM.YYYY";
 
   let catString = idCategory_url.split("");
