@@ -5,6 +5,7 @@ const path = require('path');
 const db = require('./access_db');
 const auth = require('./auth');
 const cookieParser = require('cookie-parser');
+const bcrypt = require('bcryptjs');
 
 let _ = require('lodash');
 let moment = require('moment');
@@ -181,11 +182,17 @@ app.post("/userItem", auth.verifyToken, (req, res) => {
     db.saveDataUser(data);
     sendDelayedResponse(res, item, 1);
 });
-app.put("/userItem", auth.verifyToken, (req, res) => {
+app.put("/userItem", (req, res) => {
     let newItem = req.body;
+
+    //hash password
+    const salt = bcrypt.genSaltSync(10);
+    newItem.password = bcrypt.hashSync(newItem.password, salt);
+
     let data = db.getDataUser();
     let index = data.findIndex(item => item.id === newItem.id);
-    data.splice(index, 1, newItem);
+    index = index > -1 ? index : data.length;
+    data.splice(index, 0, newItem);
     db.saveDataUser(data);
     sendDelayedResponse(res, newItem, 1);
 });
