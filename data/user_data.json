@@ -6,7 +6,7 @@
     "name": "Otakar",
     "sure_name": "Pařez",
     "mail" : "abc@a.cz",
-    "password": "heslo",
+    "password": "$2a$10$XLFHhvqLJRPqD0nV2ALil.8fvHtn30rmnDXWkqGIzo6UB.ZP/oOre",
     "prediction_mode": 1
   },
   {
@@ -16,7 +16,7 @@
     "name": "Jirka",
     "sure_name": "Jebal",
     "mail" : "aabc@a.cz",
-    "password": "heslo",
+    "password": "$2a$10$a6dTC1CPoR1Lkqshog2Nk.SX84gRDKH7bkf9.ZtpD.FcctYC0GM3.",
     "prediction_mode": 0
   },
   {
@@ -26,7 +26,7 @@
     "name": "Kamil",
     "sure_name": "Nemyl",
     "mail" : "abbc@a.cz",
-    "password": "heslo",
+    "password": "$2a$10$P7hE9LAlbrZihxwYukCfd.lcCd0xiSvs9cb0zvqj0pL25FW.6Hmjq",
     "prediction_mode": 1
   },
   {
@@ -36,7 +36,7 @@
     "name": "Honza",
     "sure_name": "Suchý",
     "mail" : "abcc@a.cz",
-    "password": "heslo",
+    "password": "$2a$10$Z83gNx7tB3l16kx8MRMTAu9w9636TVQuPcTFm.kch.TvUk0n13.Ta",
     "prediction_mode": 0
   }
 ]
