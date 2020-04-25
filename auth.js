@@ -4,11 +4,8 @@ const bcrypt = require('bcryptjs');
 const _ = require('lodash');
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
-const cookieParser = require('cookie-parser');
 
 dotenv.config();
-
-//router.use(cookieParser());
 
 router.post('/hashPassword', (req, res) => {
 
