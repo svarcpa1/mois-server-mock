@@ -234,14 +234,11 @@ function calculateCategory(userAccount, partyAccount, mode) {
         //most common
         case 0:
             if (filtered2.length===0) {
-                console.log("A");
                 category = 0;
             } else if (filtered2.length <= 3 && filtered2.length>0) {
-                console.log("B");
                 let categoryArrayGlobal = _.map(filtered, 'categoryId'); //create an array of tag values from the object array
                 category = mostCommon(categoryArrayGlobal);
             } else {
-                console.log("C");
                 let categoryArrayUser = _.map(filtered2, 'categoryId'); //create an array of tag values from the object array
                 category = mostCommon(categoryArrayUser);
             }
