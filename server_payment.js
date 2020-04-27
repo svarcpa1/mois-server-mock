@@ -180,7 +180,7 @@ app.post("/userItem", auth.verifyToken, (req, res) => {
     db.saveDataUser(data);
     sendDelayedResponse(res, item, 1);
 });
-app.put("/userItem", (req, res) => {
+app.put("/userItem", auth.verifyToken, (req, res) => {
     let newItem = req.body;
 
     //hash password

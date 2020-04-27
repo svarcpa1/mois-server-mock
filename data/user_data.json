@@ -11,7 +11,8 @@
     "sure_name": "Pařez",
     "mail": "abc@a.cz",
     "password": "$2a$10$XLFHhvqLJRPqD0nV2ALil.8fvHtn30rmnDXWkqGIzo6UB.ZP/oOre",
-    "prediction_mode": 1
+    "prediction_mode": 1,
+    "fbUser": false
   },
   {
     "id": 12349067,
@@ -25,7 +26,8 @@
     "sure_name": "Jebal",
     "mail": "aabc@a.cz",
     "password": "$2a$10$a6dTC1CPoR1Lkqshog2Nk.SX84gRDKH7bkf9.ZtpD.FcctYC0GM3.",
-    "prediction_mode": 0
+    "prediction_mode": 0,
+    "fbUser": false
   },
   {
     "id": 12785567,
@@ -39,7 +41,9 @@
     "sure_name": "Nemyl",
     "mail": "abbc@a.cz",
     "password": "$2a$10$P7hE9LAlbrZihxwYukCfd.lcCd0xiSvs9cb0zvqj0pL25FW.6Hmjq",
-    "prediction_mode": 1
+    "prediction_mode": 1,
+    "fbUser": false,
+    "fbToken": null
   },
   {
     "id": 123224567,
@@ -53,7 +57,9 @@
     "sure_name": "Suchý",
     "mail": "abcc@a.cz",
     "password": "$2a$10$Z83gNx7tB3l16kx8MRMTAu9w9636TVQuPcTFm.kch.TvUk0n13.Ta",
-    "prediction_mode": 0
+    "prediction_mode": 0,
+    "fbUser": false,
+    "fbToken": null
   },
   {
     "id": 723642154,
@@ -67,6 +73,24 @@
     "sure_name": "Mokrý",
     "mail": "mira@example.com",
     "password": "$2a$10$fgqnkrOB3FSAoVdpxP1CW.wrV/CR/ij0PMwcncAC8UW3onaeokVbm",
-    "prediction_mode": 1
+    "prediction_mode": 1,
+    "fbUser": false,
+    "fbToken": null
+  },
+  {
+    "id": 10213695853791122,
+    "userAccount": {
+      "prefix_user": "035",
+      "accountNumber_user": "41951859916",
+      "bankCode_user": "2010"
+    },
+    "active": true,
+    "name": "David",
+    "sure_name": "Nekolný",
+    "mail": "neky.d@seznam.cz",
+    "password": null,
+    "prediction_mode": 0,
+    "fbUser": true,
+    "fbToken": "EAAkluDJaoWYBAL6xA2k8szdySQ5zJR32ZC28CEOlL7rMuWkQ5ZBWh7v57V3BlgA672AZCPxgvkjcJcf4aCaW8KWSWC5yBZBmgFjvTe5R1h1Qh7XgHf6k9dwGkmVsvNew5leeenpsaZAr18zZA9hRlZC5EPoYQZBqh1YAu6ZBi3sNLWM1Hxah3RRZB0CDCQBOX0DBoA2jOiSRWUIAZDZD"
   }
 ]
