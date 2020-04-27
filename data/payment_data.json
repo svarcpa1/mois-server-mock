@@ -1705,7 +1705,7 @@
     },
     "payeeMessage": "fugiat excepteur",
     "payerMessage": "aliqua fugiat nulla",
-    "categoryId": 5,
+    "categoryId": 4,
     "additionalInfo": {
       "constantSymbol": 6744439,
       "variableSymbol": 8768772,
@@ -1948,107 +1948,8 @@
   },
   {
     "value": {
-      "amount": "25",
-      "currency": ""
-    },
-    "userAccount": {
-      "prefix_user": "035",
-      "accountNumber_user": "34518678912",
-      "bankCode_user": "2010"
-    },
-    "partyAccount": {
-      "prefix": "",
-      "accountNumber": "",
-      "bankCode": ""
-    },
-    "dueDate": "22.04.2020",
-    "recurringPayment": {
-      "firstPayment": "",
-      "lastPayment": "",
-      "interval": ""
-    },
-    "payeeMessage": "",
-    "payerMessage": "",
-    "categoryId": null,
-    "additionalInfo": {
-      "constantSymbol": "",
-      "variableSymbol": "",
-      "specificSymbol": ""
-    },
-    "id": 1587567600531,
-    "editableByUser": true,
-    "realizationStatus": ""
-  },
-  {
-    "value": {
-      "amount": 0,
-      "currency": ""
-    },
-    "userAccount": {
-      "prefix_user": 35,
-      "accountNumber_user": 123456789,
-      "bankCode_user": 2010
-    },
-    "partyAccount": {
-      "prefix": 0,
-      "accountNumber": 66666666666,
-      "bankCode": 0
-    },
-    "dueDate": "27.04.2020",
-    "recurringPayment": {
-      "firstPayment": "First payment",
-      "lastPayment": "Last payment",
-      "interval": "WEEK"
-    },
-    "payeeMessage": "",
-    "payerMessage": "",
-    "categoryId": null,
-    "additionalInfo": {
-      "constantSymbol": 0,
-      "variableSymbol": 0,
-      "specificSymbol": 0
-    },
-    "id": 1587980640907,
-    "editableByUser": true,
-    "realizationStatus": "RTS_REALISED"
-  },
-  {
-    "value": {
       "amount": 111,
-      "currency": ""
-    },
-    "userAccount": {
-      "prefix_user": 35,
-      "accountNumber_user": 34518678912,
-      "bankCode_user": 2010
-    },
-    "partyAccount": {
-      "prefix": 35,
-      "accountNumber": 66666666666,
-      "bankCode": 20
-    },
-    "dueDate": "27.04.2020",
-    "recurringPayment": {
-      "firstPayment": "First payment",
-      "lastPayment": "Last payment",
-      "interval": "WEEK"
-    },
-    "payeeMessage": "sssssss",
-    "payerMessage": "sssssssssss",
-    "categoryId": null,
-    "additionalInfo": {
-      "constantSymbol": 0,
-      "variableSymbol": 0,
-      "specificSymbol": 0
-    },
-    "id": 1587980793539,
-    "editableByUser": true,
-    "realizationStatus": "RTS_REALISED"
-  },
-  {
-    "value": {
-      "amount": 111,
-      "currency": ""
+      "currency": "CZK"
     },
     "userAccount": {
       "prefix_user": 35,
