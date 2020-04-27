@@ -70,7 +70,7 @@ app.get('/paymentListByDateUser/:from/:to/:accountNumber', (req, res) => {
     let filteredAccountNumber = _.filter(response, {userAccount: {accountNumber_user: accountNumber_url}});
     let filtered = filteredAccountNumber.filter((o) => {
         return moment(o.dueDate, 'DD.MM.YYYY') // Convert to moment with exactly date format
-            .isBetween(moment(from_url, dateFormat), moment(to_url, dateFormat));
+            .isBetween(moment(from_url, dateFormat), moment(to_url, dateFormat), null, '[]');
     });
     sendDelayedResponse(res, filtered, 1);
 });
@@ -93,7 +93,7 @@ app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (
     let filteredAccountNumber = _.filter(filteredByCategory, {userAccount: {accountNumber_user: accountNumber_url}});
     let filtered = filteredAccountNumber.filter((o) => {
         return moment(o.dueDate, 'DD.MM.YYYY') // Convert to moment with exactly date format
-            .isBetween(moment(from_url, dateFormat), moment(to_url, dateFormat));
+            .isBetween(moment(from_url, dateFormat), moment(to_url, dateFormat), null, '[]');
     });
     sendDelayedResponse(res, filtered, 1);
 });
