@@ -61,7 +61,6 @@ app.get('/paymentListByDate/:from/:to/', (req, res) => {
     });
     sendDelayedResponse(res, filtered, 1);
 });
-//new
 app.get('/paymentListByDateUser/:from/:to/:accountNumber', (req, res) => {
     let response = db.getDataPayment();
     let from_url = req.params.from;
@@ -75,7 +74,6 @@ app.get('/paymentListByDateUser/:from/:to/:accountNumber', (req, res) => {
     });
     sendDelayedResponse(res, filtered, 1);
 });
-//new
 app.get('/paymentListByDateUserCategory/:from/:to/:accountNumber/:categoryID', (req, res) => {
     let response = db.getDataPayment();
     let from_url = req.params.from;
@@ -225,30 +223,29 @@ function isEmptyObject(obj) {
 //----------------------------------------------------------------------------------------------------------------------
 
 function calculateCategory(userAccount, partyAccount, mode) {
-    let category;
+    let category = 0;
     let response = db.getDataPayment();
 
     //for party account
-    let filtered = _.filter(response, {partyAccount: {accountNumber: userAccount}});
+    let filtered = _.filter(response, {partyAccount: {accountNumber: partyAccount}});
     //user account
     let filtered2 = _.filter(filtered, {userAccount: {accountNumber_user: userAccount}});
-
     switch (mode) {
-
         //most common
         case 0:
-            if (filtered2 === []) {
+            if (filtered2.length===0) {
+                console.log("A");
                 category = 0;
-                return category.toString();
-            } else if (filtered2.length <= 3) {
+            } else if (filtered2.length <= 3 && filtered2.length>0) {
+                console.log("B");
                 let categoryArrayGlobal = _.map(filtered, 'categoryId'); //create an array of tag values from the object array
                 category = mostCommon(categoryArrayGlobal);
             } else {
+                console.log("C");
                 let categoryArrayUser = _.map(filtered2, 'categoryId'); //create an array of tag values from the object array
                 category = mostCommon(categoryArrayUser);
             }
             return category;
-
         //last
         case 1:
             let ordered = _.orderBy(filtered2, ['dueDate'], ['desc']);
