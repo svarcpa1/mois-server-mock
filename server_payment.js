@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-app.use(express.static(path.join(__dirname, 'build'), {maxAge: "30d"}));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -278,6 +278,14 @@ function mostCommon(array) {
         }
     }
     return maxEl;
+}
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); //relative path
+    });
 }
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
